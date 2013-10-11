@@ -2,11 +2,35 @@
 <head>
 </head>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<script src="js/jQuery.htmltojson.1.0.1.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="js/jQuery.html2json.1.0.1.js"></script>
+<script>
+$(document).ready(function(){
+	var json=$('#resumelist').html2json();	
+	console.log(json);
+});
+</script>
 <body>
-
+<div id="resumelist">
+	<div class="firstName" data-html="true">
+		<div class="label" data-html="false" style="float: left; margin-right:20px;"> First Name</div>
+		<div class="content" data-html="true" data-name="firstName">Dinesh</div>
+	</div>
+	<div class="lastName" data-html="true" data-name="lastName_holder">
+	<div class="label" data-html="false" style="float: left; margin-right:20px;"> Last Name</div>
+	<div class="content" data-html="true" data-name="lastName">Vadivel</div>
+	
+	</div>
+	<div class="education" data-html="true" data-name="education">
+		<div class="group" data-html="true" data-name="edu1">
+			<div class="university" data-html="true" data-name="insitute">NTU</div>
+		</div>
+		<div class="group" data-html="true" data-name="edu1">
+			<div class="university" data-html="true" data-name="insitute">AAMEC</div>
+		</div>
+	</div>
+	
+</div>
 </body>
 </html>
